@@ -1,0 +1,25 @@
+# Odin build artifacts
+pomodoro
+*.bin
+*.o
+*.a
+*.so
+*.dylib
+bin/
+out/
+
+# Metal shader artifacts
+*.metallib
+
+# Swift/Apple build artifacts
+.build/
+DerivedData/
+
+# macOS specific
+.DS_Store
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
