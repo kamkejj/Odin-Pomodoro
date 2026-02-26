@@ -9,10 +9,16 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install dependencies
+    - name: Install SDL2
+      run: brew install sdl2
+
+    - name: Setup Odin
+      uses: laytan/setup-odin@v2
+
+    - name: Build
       run: make build
