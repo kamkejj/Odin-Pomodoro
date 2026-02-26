@@ -115,7 +115,7 @@ main :: proc() {
 
     window_flags: sdl2.WindowFlags = {.METAL, .ALLOW_HIGHDPI, .ALWAYS_ON_TOP}
     window := sdl2.CreateWindow(
-        "Odin Pomodoro Timer",
+        "OPT",
         sdl2.WINDOWPOS_CENTERED,
         sdl2.WINDOWPOS_CENTERED,
         WINDOW_WIDTH,
