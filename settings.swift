@@ -39,7 +39,7 @@ struct SettingsView: View {
     
     var settingsURL: URL {
         let home = FileManager.default.homeDirectoryForCurrentUser
-        return home.appendingPathComponent(".pamodoro_settings.json")
+        return home.appendingPathComponent(".pomodoro_settings.json")
     }
 
     var body: some View {

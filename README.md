@@ -1,4 +1,4 @@
-# Pamodoro
+# Pomodoro
 
 A minimal, high-performance Pomodoro timer written in **Odin** using **Metal** for graphics on macOS.
 
@@ -47,7 +47,7 @@ make run
 
 ### Configuration
 
-The app loads settings from `~/.pamodoro_settings.json`. You can also pass flags:
+The app loads settings from `~/.pomodoro_settings.json`. You can also pass flags:
 
 ```bash
 ./pomodoro -work:25 -short_break:5 -long_break:15

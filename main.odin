@@ -52,9 +52,9 @@ get_duration :: proc(state: PomodoroState, settings: Settings) -> f32 {
 get_settings_path :: proc() -> string {
     home := os.get_env("HOME", context.temp_allocator)
     if home == "" {
-        return ".pamodoro_settings.json"
+        return ".pomodoro_settings.json"
     }
-    return filepath.join({home, ".pamodoro_settings.json"}, context.temp_allocator)
+    return filepath.join({home, ".pomodoro_settings.json"}, context.temp_allocator)
 }
 
 load_settings_from_json :: proc(settings: ^Settings, path: string) -> bool {
@@ -223,7 +223,7 @@ main :: proc() {
                     // Launch settings ui (Cmd+,)
                     exe_dir := filepath.dir(os.args[0], context.temp_allocator)
                     settings_swift_path := filepath.join({exe_dir, "settings.swift"}, context.temp_allocator)
-                    cmd_str := fmt.tprintf("swiftc \"%s\" -parse-as-library -o /tmp/pamodoro_settings_app && /tmp/pamodoro_settings_app &", settings_swift_path)
+                    cmd_str := fmt.tprintf("swiftc \"%s\" -parse-as-library -o /tmp/pomodoro_settings_app && /tmp/pomodoro_settings_app &", settings_swift_path)
                     libc.system(strings.clone_to_cstring(cmd_str, context.temp_allocator))
                 }
             }
